@@ -1,0 +1,30 @@
+/*Marrage of Anjali and Sachin*/
+wife(anjali,sachin).
+husband(sachin,anjali).
+/*Anjali's Family*/
+brother(virat,anjali).
+sister(deepika,anjali).
+father(ashwin,anjali).
+mother(ria,anjali).
+/*Sachin's Family*/
+brother(ramesh,sachin).
+sister(rutuja,sachin).
+father(rohit,sachin).
+mother(pooja,sachin).
+/*Anjali and Sachin Family*/
+father(sachin,arjun).
+father(sachin,sara).
+mother(anjali,arjun).
+mother(anjali,sara).
+
+/*Relations*/
+uncle(X,Z):- brother(X,Y), father(Y,Z).
+[]sala(X,Z):- brother(X,Y), wife(Y,Z).
+chacha(X,Z):- brother(X,Y), father(Y,Z). 
+[]mama(X,Z):- brother(X,Y), mother(Y,Z).
+maasi(X,Z):- sister(X,Y), mother(Y,Z).
+[]fufi(X,Z):- sister(X,Y), father(Y,Z). 
+[]dada(X,Z):- father(X,Y), father(Y,Z).
+[]dadi(X,Z):- mother(X,Y), father(Y,Z).
+[]nana(X,Z):- father(X,Y), mother(Y,Z).
+[]nani(X,Z):- mother(X,Y), mother(Y,Z).
